@@ -10,7 +10,8 @@ puppeteer.use(StealthPlugin());
 
 async function getState() {
     try {
-        const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
+        const browser = await puppeteer.launch({ args: ['--no-sandbox',
+                '--disable-setuid-sandbox'] });
         const page = await browser.newPage();
         await page.goto("https://www.mediamarkt.de/de/product/_microsoft-xbox-series-x-1-tb-2677360.html");
 
