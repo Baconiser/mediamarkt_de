@@ -1,2 +1,2 @@
 # mediamarkt_de
-Prince, availabilty
+Price, availabilty
