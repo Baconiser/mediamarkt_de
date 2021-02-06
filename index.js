@@ -24,7 +24,7 @@ async function getState() {
         return error;
     }
 }
-
+const PORT = Number(process.env.PORT || 3000);
 http.createServer(async (req, res) => {
     const state = await getState();
     const html = `<html lang="de">
@@ -37,4 +37,4 @@ http.createServer(async (req, res) => {
     res.write(html);
     res.end();
 
-}).listen(8800);
+}).listen(PORT);
