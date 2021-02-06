@@ -39,3 +39,4 @@ http.createServer(async (req, res) => {
     res.end();
 
 }).listen(PORT);
+console.log(`Server started on ${PORT}`);
