@@ -31,6 +31,7 @@ async function getState() {
 
 const PORT = Number(process.env.PORT || 3000);
 http.createServer(async (req, res) => {
+    await promiseTimeout(Math.floor(Math.random() * 5) * 1000);
     const state = await getState();
     const html = `<html lang="de">
     <head>
@@ -44,3 +45,10 @@ http.createServer(async (req, res) => {
 
 }).listen(PORT);
 console.log(`Server started on ${PORT}`);
+
+
+function promiseTimeout(time) {
+    return new Promise((resolve, reject) => {
+        setTimeout(resolve, time);
+    })
+}
