@@ -29,6 +29,7 @@ async function getState() {
     }
 }
 
+
 const PORT = Number(process.env.PORT || 3000);
 http.createServer(async (req, res) => {
     await promiseTimeout(Math.floor(Math.random() * 5) * 1000);
